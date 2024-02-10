@@ -1,5 +1,11 @@
 import { z } from 'zod'
 
+export interface Lead {
+  name: string
+  email: string
+  phone: string
+}
+
 export const nameSchema = z.string().min(1).max(250)
 export const emailSchema = z.string().email()
 
