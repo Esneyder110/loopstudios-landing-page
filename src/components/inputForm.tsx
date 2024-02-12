@@ -10,11 +10,12 @@ interface Props {
   error: string
 }
 
-export const InputForm: FC<Props> = ({ inputType, label, placeholder, name, handleChange, error }) => {
+export const InputForm: FC<Props> = ({ inputType, label, placeholder, name, handleChange, error, value }) => {
   return (
     <label className='flex flex-col gap-1'>
       <span>{label}</span>
       <input
+      value={value}
       onChange={handleChange}
       autoComplete={name}
       name={name}
