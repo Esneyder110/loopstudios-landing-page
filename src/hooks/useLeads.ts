@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { emailSchema, nameSchema, phoneSchema } from '../models/form.model'
 import { prettyErrors } from '../utils/prettyZodErrors'
-import { createLead } from '../services/leads'
+// import { createLead } from '../services/leads'
 
 interface LeadReturn {
   handleSubmit: React.FormEventHandler
@@ -61,11 +61,11 @@ export function useLeads (): LeadReturn {
 
     if (nameResult.success && emailResult.success && phoneResult.success) {
       // hago el fetch
-      createLead({ name, email, phone: tel }).then(data => {
-        return data
-      }).catch(error => {
-        console.log(error)
-      })
+      // createLead({ name, email, phone: tel }).then(data => {
+      //   return data
+      // }).catch(error => {
+      //   console.log(error)
+      // })
       // mostar modal
       setShowModal(true)
       // reiniciar el formulario
